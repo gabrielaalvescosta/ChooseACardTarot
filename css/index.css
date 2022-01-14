@@ -7,11 +7,27 @@
     box-sizing: border-box;
 }
 
+::selection{background: #a268ff; color:#fff;}
+::-moz-selection{background: #a268ff; color:#fff;}
+
 body {
     background: url(../assets/universo.jpg)repeat;
     font-family: "Montserrat", sans-serif;
     color: white;
-    line-height: 1.6;
+    line-height: 1.7;
+}
+
+b {
+    color: #ff49d8;
+}
+
+
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 header, main {
@@ -35,7 +51,6 @@ header, main {
 .header__subtitle {
     color: white;
     text-transform: uppercase;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #1d18ff, 0 0 30px #2b0050, 0 0 40px #000000, 0 0 55px #550499, 0 0 75px #4c09ca;
     margin: 0 0 1em 0;
 }
 
@@ -43,27 +58,110 @@ header, main {
     max-width: 300px;
 }
 
-.main__tarot-area__tarot-card {
-    width: 210px;
-    margin: 1em;
+
+.main__tarot-card {
+    width: 200px;
+    min-width: 210px;
+    margin: 0;
     height: 300px;
-    border-radius: 1em;
-    background: #585dff;
-    box-shadow: 1px 2px 6px 20px #000;
+    border-radius: 0.5em;
+    background: #fc58ff url(../assets/card.png) center no-repeat;
+    box-shadow: -1px 1px 12px 0px #1b0838;
 }
 
-.main__tarot-area__tarot-answer {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #bbb1ff;
+
+.main__tarot-modal__tarot-card {
+    width: 200px;
+    min-width: 200px;
+    margin: 0 3em 0 0;
+    height: 300px;
+    border-radius: 1em;
+    background: #fff;
+    box-shadow: -1px 1px 12px 0px #1b0838;
 }
+
+
+
+/* MODAL */
+
+.main__tarot-modal {
+    display: none;
+    background: #37274ade;
+    padding: 3em;
+    max-width: 45vw;
+    border-radius: 0.5em;
+}
+
+.main__tarot-modal__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main__tarot-modal__tarot-answer {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__tarot-modal__tarot-answer h2 {
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0.5em;
+    letter-spacing: 2px;
+}
+
+.main__tarot-modal__tarot-modal-yn-close {
+    display: flex;
+    border-bottom: 1px solid #57448f;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    align-items: center;
+}
+
+.main__tarot-modal__close {
+    background: #523083;
+    width: 30px;
+    height: 30px;
+    color: #302245;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: large;
+    box-shadow: 1px 2px 0px 1px #221734;
+    cursor: pointer;
+}
+
+.main__tarot-modal__buttons button {
+border: none;
+background: #602eab;
+padding: 1em 2em;
+color: #bb8eff;
+font-family: 'Montserrat',sans-serif;
+border-radius: 5px;
+margin: 2em 0;
+cursor: pointer;
+box-shadow:3px 4px 0px 0px #472181
+}
+
+.main__tarot-modal__buttons button:active { 
+box-shadow: inset 4px 5px 0px 0px #46237a;
+}
+
+
+.main__tarot-modal__explanation {
+    text-align: left;
+    color: #d2bfef;
+}
+
+/* CSS ANIMATIONS */
 
 .flip {
 	-webkit-animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	        animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
-@-webkit-keyframes flip-2-hor-top-1 {
+@-webkit-keyframes flip {
     0% {
       -webkit-transform: translateY(0) rotateX(0);
               transform: translateY(0) rotateX(0);
@@ -77,7 +175,7 @@ header, main {
               transform-origin: 50% 100%;
     }
   }
-  @keyframes flip-2-hor-top-1 {
+  @keyframes flip {
     0% {
       -webkit-transform: translateY(0) rotateX(0);
               transform: translateY(0) rotateX(0);
@@ -92,4 +190,15 @@ header, main {
     }
   }
   
+  .float {
+    -webkit-animation-name: Floating;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+  }
   
+  @-webkit-keyframes Floating {
+      from {-webkit-transform:translate(0, 0px);}
+      65% {-webkit-transform:translate(0, 15px);}
+      to {-webkit-transform: translate(0, -0px);    }
+  }
