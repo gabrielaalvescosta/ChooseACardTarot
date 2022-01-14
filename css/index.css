@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap');
+
+/* RESET CSS */
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../assets/universo.jpg)repeat;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+header, main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em;
+}
+
+
+.header-yn h1 {
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+.header__subtitle {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #1d18ff, 0 0 30px #2b0050, 0 0 40px #000000, 0 0 55px #550499, 0 0 75px #4c09ca;
+    margin: 0 0 1em 0;
+}
+
+.header__paragraph {
+    max-width: 300px;
+}
+
+.main__tarot-area__tarot-card {
+    width: 210px;
+    margin: 1em;
+    height: 300px;
+    border-radius: 1em;
+    background: #585dff;
+    box-shadow: 1px 2px 6px 20px #000;
+}
+
+.main__tarot-area__tarot-answer {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #bbb1ff;
+}
+
+.flip {
+	-webkit-animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes flip-2-hor-top-1 {
+    0% {
+      -webkit-transform: translateY(0) rotateX(0);
+              transform: translateY(0) rotateX(0);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+    100% {
+      -webkit-transform: translateY(-100%) rotateX(-180deg);
+              transform: translateY(-100%) rotateX(-180deg);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+  }
+  @keyframes flip-2-hor-top-1 {
+    0% {
+      -webkit-transform: translateY(0) rotateX(0);
+              transform: translateY(0) rotateX(0);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+    100% {
+      -webkit-transform: translateY(-100%) rotateX(-180deg);
+              transform: translateY(-100%) rotateX(-180deg);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+  }
+  
+  
