@@ -23,18 +23,22 @@
     <div id="modalContainer"  class="modal-background">
     <div id="modal" class="main__tarot-modal">
     <div class="main__tarot-modal__container">
-    <div class="main__tarot-modal__tarot-card">FOTO AQUI</div>
+        <div class="main__tarot-modal__tarot-card">
+        <div id="card-photo" class="main__tarot-modal__card-photo"><img id="photo" alt=""/></div>
+        <div id="card-name" class="main__tarot-modal__card-name"></div>
+    </div>
+    
     <div class="main__tarot-modal__tarot-answer">
     <div class="main__tarot-modal__tarot-modal-yn-close">
         
-         <h2><b>Your answer is:</b> YES</h2>
+         <h2><b>Your answer is:</b> <span id="yes-or-no"></span></h2>
          <div id="closeButton" class="main__tarot-modal__close">x</div>
     </div>
    
-    <div class="main__tarot-modal__explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate euismod nisi. Morbi sit amet dapibus nisi. Morbi maximus leo et vehicula dignissim. Aliquam erat volutpat.
+    <div id="explanation" class="main__tarot-modal__explanation">
+    </div>
     <div class="main__tarot-modal__buttons">
     <button id="again">Play Again</button>
-    </div>
     </div>
     </div>
     </div>

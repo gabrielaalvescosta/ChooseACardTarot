@@ -19,6 +19,7 @@ body {
 
 b {
     color: #ff49d8;
+    font-size: smaller;
 }
 
 
@@ -71,14 +72,24 @@ header, main {
 }
 
 
-.main__tarot-modal__tarot-card {
+.main__tarot-modal__card-photo {
     width: 200px;
     min-width: 200px;
-    margin: 0 3em 0 0;
+    margin: 0 2em 0 0;
     height: 300px;
     border-radius: 1em;
     background: #fff;
     box-shadow: -1px 1px 12px 0px #1b0838;
+}
+
+.main__tarot-modal__card-name {
+    background: none;
+    padding: 1em;
+    border-radius: 1em;
+    width: 200px;
+    color: white;
+    margin: 1em 0;
+
 }
 
 /* MODAL */
@@ -104,9 +115,9 @@ header, main {
 .main__tarot-modal {
     background: #270e3a;
     padding: 3em;
-    max-width: 45vw;
+    max-width: 40vw;
     border-radius: 0.5em;
-    box-shadow: 2px 2px 20px 0px #000;
+    box-shadow: 2px 2px 40px 0px #000;
     position: relative;
     margin: 3em auto;
     transition: all ease 1s;
@@ -121,6 +132,9 @@ header, main {
 .main__tarot-modal__tarot-answer {
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .main__tarot-modal__tarot-answer h2 {
@@ -128,8 +142,10 @@ header, main {
     color: white;
     text-align: left;
     text-transform: uppercase;
-    padding: 0.5em;
+    padding: 0 2em 0.5em 0;
     letter-spacing: 2px;
+    line-height: 1.3;
+    font-size: 2em;
 }
 
 .main__tarot-modal__tarot-modal-yn-close {
@@ -138,13 +154,14 @@ header, main {
     width: 100%;
     justify-content: space-between;
     margin: 0 0 20px 0;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .main__tarot-modal__close {
     background: #523083;
     width: 30px;
     height: 30px;
+    min-width: 30px;
     color: #302245;
     border-radius: 50%;
     font-weight: bold;
