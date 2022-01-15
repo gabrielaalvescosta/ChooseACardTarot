@@ -67,6 +67,7 @@ header, main {
     border-radius: 0.5em;
     background: #fc58ff url(../assets/card.png) center no-repeat;
     box-shadow: -1px 1px 12px 0px #1b0838;
+    cursor: pointer;
 }
 
 
@@ -80,17 +81,41 @@ header, main {
     box-shadow: -1px 1px 12px 0px #1b0838;
 }
 
-
-
 /* MODAL */
 
+
+.modal-background {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(9 1 38 / 69%); 
+    background-color: rgb(9 1 38 / 69%); 
+  }
+  
+
 .main__tarot-modal {
-    display: none;
-    background: #37274ade;
+    background: #270e3a;
     padding: 3em;
     max-width: 45vw;
     border-radius: 0.5em;
+    box-shadow: 2px 2px 20px 0px #000;
+    position: relative;
+    margin: 3em auto;
+    transition: all ease 1s;
 }
+
+.main__tarot-modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    
+  }
+
 
 .main__tarot-modal__container {
     display: flex;
@@ -151,14 +176,14 @@ box-shadow: inset 4px 5px 0px 0px #46237a;
 
 .main__tarot-modal__explanation {
     text-align: left;
-    color: #d2bfef;
+    color: #999ac1;
 }
 
 /* CSS ANIMATIONS */
 
-.flip {
-	-webkit-animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: flip-2-hor-top-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+.flipping {
+	-webkit-animation: flipping 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flipping 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 @-webkit-keyframes flip {
@@ -190,15 +215,3 @@ box-shadow: inset 4px 5px 0px 0px #46237a;
     }
   }
   
-  .float {
-    -webkit-animation-name: Floating;
-      -webkit-animation-duration: 3s;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: ease-in-out;
-  }
-  
-  @-webkit-keyframes Floating {
-      from {-webkit-transform:translate(0, 0px);}
-      65% {-webkit-transform:translate(0, 15px);}
-      to {-webkit-transform: translate(0, -0px);    }
-  }
