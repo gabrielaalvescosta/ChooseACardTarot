@@ -95,7 +95,9 @@ header, main {
     height: 100%; 
     overflow: auto; 
     background-color: rgb(9 1 38 / 69%); 
-    background-color: rgb(9 1 38 / 69%); 
+    background-color: rgb(9 1 38 / 69%);
+    opacity:0;
+    transition: opacity 1s; 
   }
   
 
@@ -109,12 +111,6 @@ header, main {
     margin: 3em auto;
     transition: all ease 1s;
 }
-
-.main__tarot-modal:target {
-    opacity: 1;
-    pointer-events: auto;
-    
-  }
 
 
 .main__tarot-modal__container {

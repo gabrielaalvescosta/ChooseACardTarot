@@ -1,17 +1,25 @@
-const modal = document.getElementById('modal');
+const modalContainer = document.getElementById('modalContainer');
 const card = document.getElementById('card');
 const closeButton = document.getElementById('closeButton');
+const playAgain = document.getElementById('again');
 
-// Show the modal when click on card
+// Show the modalContainer when click on card
 card.onclick = function() {
     card.style.animation = "flip 1s linear";
-    setTimeout(() => {modal.style.display = "block";}, 1200);
+    setTimeout(() => {modalContainer.style.display = "block";}, 750);
+    setTimeout(() => {modalContainer.style.opacity = 1;}, 1000);
 
   }
 
-// Close modal when click in "x"
+// Close modalContainer when click in "x"
 closeButton.onclick = function() {
-    modal.style.display = "none";
-    card.removeEventListener('click', card);
-  }
+    modalContainer.style.opacity = 0;
+    setTimeout(() => {modalContainer.style.display = 'none'}, 900);
+}
 
+playAgain.onclick = function(e){
+    e.stopPropagation();
+    modalContainer.style.opacity = 0;
+    setTimeout(() => {modalContainer.style.display = 'none'}, 900);
+  }
+  
