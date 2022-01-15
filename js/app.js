@@ -10,13 +10,13 @@ function getCards(){
           return response.json();
         })
         .then(function(data) {
-          console.log(data);
-          return data;
+          console.log(data.autores);
+          return data.autores;
         })
         .catch((error) => {
           console.error(error);
-        })
-  }
+        });
+}
 
 // Show the modalContainer when click on card
 card.onclick = function() {
