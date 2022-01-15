@@ -1,11 +1,12 @@
 // modal
+const url = 'https://tarot-yn.herokuapp.com/cards';
 const modalContainer = document.getElementById('modalContainer');
 const card = document.getElementById('card');
 const closeButton = document.getElementById('closeButton');
 const playAgain = document.getElementById('again');
 
 function getCards(){
-  fetch('https://tarot-yn.herokuapp.com/cards')
+  fetch(url)
         .then(function(response) {
           return response.json();
         })
@@ -18,10 +19,10 @@ function getCards(){
         });
 }
 
+
 // Show the modalContainer when click on card
 card.onclick = function() {
     this.style.animation = '';
-    getCards();
     setTimeout(() => {card.style.animation = "flip 1s linear";}, 500);
     setTimeout(() => {modalContainer.style.display = "block";}, 750);
     setTimeout(() => {modalContainer.style.opacity = 1;}, 1000);
