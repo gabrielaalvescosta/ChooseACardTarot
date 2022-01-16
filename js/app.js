@@ -27,7 +27,7 @@ function getCards(){
           const image = document.createAttribute("src");
           image.value = "data.autores[cardNumber].url";
           document.getElementById('photo').setAttributeNode(image);
-          console.log(data.autores[cardNumber].url)
+          console.log(data.autores[cardNumber].url);
 
         })
         .catch((error) => {
