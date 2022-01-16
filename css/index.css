@@ -59,24 +59,34 @@ header, main {
     max-width: 300px;
 }
 
+.main__container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .main__tarot-card {
     width: 200px;
     min-width: 210px;
-    margin: 0;
+    margin: 2em;
     height: 300px;
     border-radius: 0.5em;
     background: #fc58ff url(../assets/card.png) center no-repeat;
     box-shadow: -1px 1px 12px 0px #1b0838;
     cursor: pointer;
+    transition: all ease 1s;
 }
 
+.main__tarot-card:hover {
+    margin-bottom: 5px;
+}
 
 .main__tarot-modal__card-photo img {
     width: 150px;
     min-width: 150px;
     margin: 0 2em 0 0;
     height: auto;
+    filter: saturate(0);
     border: 8px solid #c6c6c6;
     border-radius: 1em;
     background: #fff;
@@ -87,7 +97,7 @@ header, main {
     background: none;
     padding: 1em;
     border-radius: 1em;
-    width: 200px;
+    width: 150px;
     color: white;
     margin: 0 2em 0 0;
     font-size: smaller;

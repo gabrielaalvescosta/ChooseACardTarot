@@ -1,7 +1,8 @@
 // modal
 const url = 'https://tarot-yn.herokuapp.com/cards';
 const modalContainer = document.getElementById('modalContainer');
-const card = document.getElementById('card');
+// const card = document.getElementById('card');
+let card = document.getElementsByClassName('main__tarot-card');
 const closeButton = document.getElementById('closeButton');
 const playAgain = document.getElementById('again');
 
@@ -13,6 +14,7 @@ function getCards(){
   const min = Math.ceil(0);
   const max = Math.floor(21);
   let cardNumber = Math.floor(Math.random() * (max - min)) + min;
+ 
 
   fetch(url)
         .then(function(response) {
@@ -36,15 +38,29 @@ function getCards(){
         });
 }
 
-
 // Show the modalContainer when click on card
-card.onclick = function() {
+for (let i = 0; i < card.length; i++) {
+
+card[i].onclick = function() {
+  this.style.animation = '';
+  getCards();
+  
+  setTimeout(() => {card[i].style.animation = "flip 1s linear";}, 500);
+  setTimeout(() => {modalContainer.style.display = "block";}, 750);
+  setTimeout(() => {modalContainer.style.opacity = 1;}, 1000);
+}
+
+}
+
+/* card.onclick = function() {
     this.style.animation = '';
     getCards();
+    
     setTimeout(() => {card.style.animation = "flip 1s linear";}, 500);
     setTimeout(() => {modalContainer.style.display = "block";}, 750);
     setTimeout(() => {modalContainer.style.opacity = 1;}, 1000);
 }
+ */
 
 // Close modalContainer when click in "x"
 closeButton.onclick = function() {
