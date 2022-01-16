@@ -7,7 +7,6 @@ const closeButton = document.getElementById('closeButton');
 const playAgain = document.getElementById('again');
 
 
-
 async function getCards(cardNumber){ 
 
   const res = await fetch(url)
@@ -56,10 +55,13 @@ card[i].onclick = async function() {
     const max = Math.floor(21);
     let cardNumber = Math.floor(Math.random() * (max - min)) + min;
 
-  const dados = await getCards(cardNumber);
+    const dados = await getCards(cardNumber);
   
   setTimeout(() => {
-    card[i].style.animation = "flip 1s linear";}, 500);
+    card[i].style.filter = "grayscale(100%)";
+    card[i].style.animation = "flip 1s linear";
+  }, 500);
+  
   setTimeout(() => {
     modalContainer.style.display = "block";
     this.style.backgroundImage = `url('${dados.cartas[cardNumber].url}')`;
@@ -88,6 +90,7 @@ closeButton.onclick = function() {
 playAgain.onclick = function(e){
     e.preventDefault();
     modalContainer.style.opacity = 0;
+    card[i].style.animation = "flip 1s linear";
     setTimeout(() => {
       modalContainer.style.display = 'none';
       modalContainer.style.backgroundImage = `url('${dados.cartas[cardNumber].url}')`;
