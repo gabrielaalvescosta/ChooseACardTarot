@@ -19,15 +19,16 @@ function getCards(){
           return response.json();
         })
         .then(function(data) {
-          console.log(data.autores);
-          document.getElementById('card-name').innerHTML = data.autores[cardNumber].card_name;
-          document.getElementById('explanation').innerHTML = data.autores[cardNumber].explanation;
-          document.getElementById('yes-or-no').innerHTML = data.autores[cardNumber].yes_or_no;
+          console.log(data.cartas);
+          document.getElementById('card-name').innerHTML = data.cartas[cardNumber].card_name;
+          document.getElementById('explanation').innerHTML = data.cartas[cardNumber].explanation;
+          document.getElementById('yes-or-no').innerHTML = data.cartas[cardNumber].yes_or_no;
 
           const image = document.createAttribute("src");
-          image.value = "data.autores[cardNumber].url";
+          image.value = data.cartas[cardNumber].url;
           document.getElementById('photo').setAttributeNode(image);
-          console.log(data.autores[cardNumber].url);
+          
+          console.log(data.cartas[cardNumber].url);
 
         })
         .catch((error) => {
