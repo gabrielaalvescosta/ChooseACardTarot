@@ -38,7 +38,7 @@ header, main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2em;
+    margin: 1em;
 }
 
 
@@ -67,11 +67,12 @@ header, main {
 
 .main__tarot-card {
     width: 200px;
-    min-width: 210px;
+    min-width: 200px;
     margin: 2em;
-    height: 300px;
+    border: 8px solid #e8e8e8;
+    height: 340px;
     border-radius: 0.5em;
-    background: #fc58ff url(../assets/card.png) center no-repeat;
+    background: #fc58ff url(../assets/card.png) center/contain no-repeat;
     box-shadow: -1px 1px 12px 0px #1b0838;
     cursor: pointer;
     transition: all ease 1s;
@@ -219,8 +220,8 @@ box-shadow: inset 4px 5px 0px 0px #46237a;
               transform-origin: 50% 0%;
     }
     100% {
-      -webkit-transform: translateY(-100%) rotateX(-180deg);
-              transform: translateY(-100%) rotateX(-180deg);
+      -webkit-transform: translateY(-100%) rotateX(-30deg);
+              transform: translateY(-100%) rotateX(-30deg);
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
     }
@@ -233,8 +234,8 @@ box-shadow: inset 4px 5px 0px 0px #46237a;
               transform-origin: 50% 0%;
     }
     100% {
-      -webkit-transform: translateY(-100%) rotateX(-180deg);
-              transform: translateY(-100%) rotateX(-180deg);
+      -webkit-transform: translateY(-100%) rotateX(-90deg);
+              transform: translateY(-100%) rotateX(-90deg);
       -webkit-transform-origin: 50% 100%;
               transform-origin: 50% 100%;
     }
