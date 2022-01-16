@@ -76,7 +76,7 @@ header, main {
     background: #fc58ff url(../assets/card.png) center/contain no-repeat;
     box-shadow: -1px 1px 12px 0px #1b0838;
     cursor: pointer;
-    transition: all ease 1s;
+    transition: all ease 0.2s;
 }
 
 .main__tarot-card:hover {
@@ -206,7 +206,7 @@ box-shadow: inset 4px 5px 0px 0px #46237a;
     color: #999ac1;
 }
 
-.footer {
+footer {
     font-size: smaller;
     font-size: x-small;
     color: #7777cf;
@@ -215,8 +215,8 @@ box-shadow: inset 4px 5px 0px 0px #46237a;
 /* CSS ANIMATIONS */
 
 .flipping {
-	-webkit-animation: flip-vertical-right 0.01s cubic-bezier(0.355, 0.020, 0.215, 0.355) both;
-	        animation: flip-vertical-right 0.01s cubic-bezier(0.355, 0.020, 0.215, 0.355) both;
+	-webkit-animation: flip-vertical-right 0.1s cubic-bezier(0.050, 0.010, 0.090, 0.090) both;
+	        animation: flip-vertical-right 0.1s cubic-bezier(0.050, 0.010, 0.090, 0.090) both;
 }
 
 @-webkit-keyframes flip {
