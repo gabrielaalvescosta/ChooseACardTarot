@@ -56,7 +56,7 @@ for (let i = 0; i < card.length; i++) {
 closeButton.onclick = function () {
       modalContainer.style.opacity = 0;
       setTimeout(() => {modalContainer.style.display = 'none';
-      }, 400);
+      }, 300);
 }
 
 
