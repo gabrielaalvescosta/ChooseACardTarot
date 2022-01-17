@@ -54,6 +54,7 @@ for (let i = 0; i < card.length; i++) {
 
 // Close modalContainer when click in "x"
 closeButton.onclick = function () {
+      
       modalContainer.style.opacity = 0;
       setTimeout(() => {modalContainer.style.display = 'none';
       }, 300);
