@@ -177,6 +177,7 @@ header, main {
     height: 30px;
     min-width: 30px;
     color: #302245;
+    line-height: 1.55;
     border-radius: 50%;
     font-weight: bold;
     font-size: large;

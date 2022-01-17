@@ -6,10 +6,11 @@ const closeButton = document.getElementById('closeButton');
 const playAgain = document.getElementById('again');
 
 // random number card
-const min = Math.ceil(0);
-const max = Math.floor(21);
-const arrayOfRandomNumbers = [];
-let cardNumber = Math.floor(Math.random() * (max - min)) + min;
+
+  const min = Math.ceil(0);
+  const max = Math.floor(21);
+  let random = Math.floor(Math.random() * (max - min)) + min;
+  let cardNumber = random;
 
 
 async function getCards(cardNumber) {
@@ -39,15 +40,15 @@ for (let i = 0; i < card.length; i++) {
             setTimeout(() => {
               card[i].style.filter = 'grayscale(100%)';
               card[i].style.animation = 'flip 1s linear';
-            }, 100);
+            }, 10);
 
             setTimeout(() => {
               modalContainer.style.display = 'block'
               this.style.backgroundImage = `url('${dados.cartas[cardNumber].url}')`;
-            }, 400);
+            }, 100);
             setTimeout(() => {
               modalContainer.style.opacity = 1;
-            }, 500);
+            }, 200);
       }
 }
 
@@ -58,9 +59,16 @@ closeButton.onclick = function () {
       }, 400);
 }
 
+
+
 // play again button
 playAgain.onclick = function (e) {
       e.stopPropagation();
+
+      let newRandom = Math.floor(Math.random() * (max - min)) + min;
+      cardNumber = newRandom;
+      getCards(cardNumber);
+
       modalContainer.style.opacity = 0;
       const backgroundCard = 'url(https://raw.githubusercontent.com/gabrielaalvescosta/ChooseACardTarot/main/assets/card.png)';
       let cardClose = document.getElementsByClassName('main__tarot-card');
@@ -72,5 +80,5 @@ playAgain.onclick = function (e) {
       cardClose[j].style.animation = 'flip 1s linear';
   }
 
-      setTimeout(() => {modalContainer.style.display = 'none'}, 400)
+      setTimeout(() => {modalContainer.style.display = 'none'}, 250)
 }
