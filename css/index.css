@@ -241,3 +241,27 @@ footer {
     }
   }
   
+@media (max-width: 900px) {
+
+    .main__tarot-card {
+        margin: 0.5em;
+    }
+
+
+    .main__tarot-modal {
+        width: 90vw;
+        max-width: 90vw;
+    }
+
+    .main__tarot-modal__container{
+        flex-direction: column;
+    }
+
+    .main__tarot-modal__close, .main__tarot-modal__card-name {
+        display: none;
+    }
+
+    .main__tarot-modal__card-photo img{
+        margin: 2em 0;
+    }
+}
