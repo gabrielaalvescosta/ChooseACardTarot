@@ -37,10 +37,10 @@ for (let i = 0; i < card.length; i++) {
             this.style.animation = '';
             const dados = await getCards(cardNumber);
 
-            setTimeout(() => {
+         
               card[i].style.filter = 'grayscale(100%)';
-              card[i].style.animation = 'flip 1s linear';
-            }, 10);
+              card[i].style.animation = 'flip 0.2s linear';
+          
 
             setTimeout(() => {
               modalContainer.style.display = 'block'
@@ -55,6 +55,10 @@ for (let i = 0; i < card.length; i++) {
 // Close modalContainer when click in "x"
 closeButton.onclick = function () {
       
+      let newRandom = Math.floor(Math.random() * (max - min)) + min;
+      cardNumber = newRandom;
+      getCards(cardNumber);
+
       modalContainer.style.opacity = 0;
       setTimeout(() => {modalContainer.style.display = 'none';
       }, 300);
@@ -78,7 +82,7 @@ playAgain.onclick = function (e) {
 
       cardClose[j].style.filter = 'grayscale(0%)';
       cardClose[j].style.backgroundImage = backgroundCard;
-      cardClose[j].style.animation = 'flip 1s linear';
+      cardClose[j].style.animation = 'flip 0.2s linear';
   }
 
       setTimeout(() => {modalContainer.style.display = 'none'}, 250)
