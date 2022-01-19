@@ -6,3 +6,5 @@ This is a very simple tarot game made with pure JavaScript, CSS and HTML. It's a
   <img src="./previa-mobile.gif" height="320px" alt="Versão Mobile"/>
 </p>
 
+# TarotYesorNoAPI 
+You can see the back-end aplication <a href="https://github.com/gabrielaalvescosta/TarotYesorNoAPI" target="_blank">in this link</a>.
