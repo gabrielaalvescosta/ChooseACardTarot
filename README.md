@@ -10,4 +10,4 @@ This is a very simple tarot game made with pure JavaScript, CSS and HTML. It's a
 
 
 # TarotYesorNoAPI 
-You can see the back-end aplication <a href="https://github.com/gabrielaalvescosta/TarotYesorNoAPI" target="_blank">in this link</a>.
+You can see the back-end application <a href="https://github.com/gabrielaalvescosta/TarotYesorNoAPI" target="_blank">in this link</a>.
