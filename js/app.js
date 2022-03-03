@@ -32,10 +32,10 @@ async function getCards(cardNumber) {
 // Show the modalContainer when click on card
 for (let i = 0; i < card.length; i++) {
     
-      card[i].onclick = async function () {
+      card[i].onclick = function () {
 
             this.style.animation = '';
-            const dados = await getCards(cardNumber);
+            const dados = getCards(cardNumber);
 
          
               card[i].style.filter = 'grayscale(100%)';
