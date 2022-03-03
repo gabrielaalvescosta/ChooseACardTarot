@@ -45,10 +45,10 @@ for (let i = 0; i < card.length; i++) {
             setTimeout(() => {
               modalContainer.style.display = 'block'
               this.style.backgroundImage = `url('${dados.cartas[cardNumber].url}')`;
-            }, 100);
+            }, 50);
             setTimeout(() => {
               modalContainer.style.opacity = 1;
-            }, 200);
+            }, 50);
       }
 }
 
